@@ -42,5 +42,21 @@ def fizzBuzz(n: int) -> list[str]:
     return output_list
 
 
+def optimzed_fizzBuzz(n: int) -> list[str]:
+    answer = []
+
+    for number in range(1, n + 1):
+        if number % 3 == 0 and number % 5 == 0 :
+            answer.append("FizzBuzz")
+        elif number % 3 == 0:
+            answer.append("Fizz")
+        elif number % 5 == 0:
+            answer.append("Buzz")
+        else:
+            answer.append(str(number))
+
+    return answer
+
+
 if __name__ == "__main__" :
     print(fizzBuzz(3))
