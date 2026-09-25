@@ -25,6 +25,19 @@ def is_armstrong_number(num):
     return False
 
 
+# optimal way to write 
+def armstrong_number(number):
+    num = number
+    power = len(str(number))
+    total = 0
+    while num > 0 :
+        last_digit = num % 10
+        num = num // 10
+        total += last_digit **power
+    return total == number
+    
+
+
 
 
 
